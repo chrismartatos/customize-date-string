@@ -1,0 +1,109 @@
+.hide { display: none; }
+.cf:before, .cf:after { content:""; display:table; }
+.cf:after { clear:both; }
+.cf { zoom:1; }
+
+/*--------------------------------------------------------------------
+		Center list
+--------------------------------------------------------------------*/
+.center-ul { width:100%; overflow:hidden; position:relative }
+.center-ul > ul { clear:left; float:left; position:relative; left:50%; text-align:center; list-style:none; margin:0; padding:0 }
+.center-ul > ul > li { display:block; float:left; position:relative; right:50% }
+.center-ul > ul > li > a { display:block; margin:0 10px }
+
+
+/*--------------------------------------------------------------------
+		Header // Footer
+--------------------------------------------------------------------*/
+#header,
+#footer { 
+	width: 100%; 
+	display: block; 
+	position: fixed; 
+	z-index: 5; 
+	left: 0; 
+	right: auto; 
+}
+
+#header {
+	top:0;
+	height: 50px;
+	background-color: rgba(255,255,255,.8); 
+	z-index: 9999;/*More tha preloader just to show logo*/
+}
+
+#footer {
+	bottom: 4%;
+	padding: 8px 0;
+}
+
+#footer a {
+	font:600 38px/38px 'Open Sans';
+	color: #FFF;
+	text-decoration: none;
+}
+
+#logo {
+	display: block;
+	text-align: center;
+	padding: 10px 0 0;
+}
+
+#logo img { 
+	display: inline;
+}
+
+
+
+/*--------------------------------------------------------------------
+		Layout
+--------------------------------------------------------------------*/
+#content {
+	padding-top: 100px;
+}
+
+.post {
+	padding: 20px;
+	width: 60%;
+	background-color: #eee;
+	border:1px solid #ccc;
+	margin: 5px auto;
+	text-align: center;
+}
+
+.date {
+	display: block;
+	width: 80px;
+	height: 60px;
+	padding-top: 20px;
+	background: #000;
+	margin: 0 auto;
+	border: 5px solid #FFF;
+	
+}
+
+.date span {
+	display: block;
+	color: #FFF;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.date .month {
+	font-size: 14px;
+}
+
+.date .day {
+	font-size: 26px;
+}
+
+
+/*--------------------------------------------------------------------
+		Some CSS for mobile
+--------------------------------------------------------------------*/
+@media only screen and (max-width: 767px)
+{
+	#header { position: relative; height: 45px; }
+	#logo { padding: 0; } 	
+	
+}
