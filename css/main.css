@@ -1,46 +1,15 @@
-.hide { display: none; }
-.cf:before, .cf:after { content:""; display:table; }
-.cf:after { clear:both; }
-.cf { zoom:1; }
-
-/*--------------------------------------------------------------------
-		Center list
---------------------------------------------------------------------*/
-.center-ul { width:100%; overflow:hidden; position:relative }
-.center-ul > ul { clear:left; float:left; position:relative; left:50%; text-align:center; list-style:none; margin:0; padding:0 }
-.center-ul > ul > li { display:block; float:left; position:relative; right:50% }
-.center-ul > ul > li > a { display:block; margin:0 10px }
-
-
 /*--------------------------------------------------------------------
 		Header // Footer
 --------------------------------------------------------------------*/
-#header,
-#footer { 
+#header { 
 	width: 100%; 
 	display: block; 
 	position: fixed; 
-	z-index: 5; 
+	z-index: 999; /*Use with cause*/ 
 	left: 0; 
-	right: auto; 
-}
-
-#header {
 	top:0;
 	height: 50px;
-	background-color: rgba(255,255,255,.8); 
-	z-index: 9999;/*More tha preloader just to show logo*/
-}
-
-#footer {
-	bottom: 4%;
-	padding: 8px 0;
-}
-
-#footer a {
-	font:600 38px/38px 'Open Sans';
-	color: #FFF;
-	text-decoration: none;
+	background-color: rgba(255,255,255,.9); 
 }
 
 #logo {
@@ -49,7 +18,7 @@
 	padding: 10px 0 0;
 }
 
-#logo img { 
+#logo > img { 
 	display: inline;
 }
 
@@ -58,8 +27,18 @@
 /*--------------------------------------------------------------------
 		Layout
 --------------------------------------------------------------------*/
+
 #content {
 	padding-top: 100px;
+}
+
+h1 {
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	line-height: 24px;
 }
 
 .post {
@@ -82,18 +61,18 @@
 	
 }
 
-.date span {
+.date > span {
 	display: block;
 	color: #FFF;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
-.date .month {
+.date > .month {
 	font-size: 14px;
 }
 
-.date .day {
+.date > .day {
 	font-size: 26px;
 }
 
